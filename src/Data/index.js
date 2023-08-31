@@ -70,7 +70,7 @@ export const foodGroups = [
 export const foodData = {
   protein: a,
   carbohydrates: {
-    cookedRice: {
+    'Cooked Rice': {
       kcal: 130,
       protein: 2.69,
       carbohydrates: 28.7,
@@ -79,85 +79,85 @@ export const foodData = {
 
   },
   fruts: {
-    plum: {
+    'Plum': {
       kcal: 46,
       protein: 0.7,
       carbohydrates: 11.42,
       fats: 0.28
     },
-    passGrapes: {
+    'Pass Grapes': {
       kcal: 299,
       protein: 3.07,
       carbohydrates: 79.18,
       fats: 0.46
     },
-    strawberry: {
+    'Strawberry': {
       kcal: 32,
       protein: 0.67,
       carbohydrates: 7.68,
       fats: 0.3
     },
-    watermelon: {
+    'Watermelon': {
       kcal: 30,
       protein: 0.61,
       carbohydrates: 7.55,
       fats: 0.15
     },
-    orangeJuice: {
+    'Orange Juice': {
       kcal: 45,
       protein: 0.7,
       carbohydrates: 10.4,
       fats: 0.2
     },
-    tangerine: {
+    'Tangerine': {
       kcal: 53,
       protein: 0.81,
       carbohydrates: 13.34,
       fats: 0.31
     },
-    passionFruitJuice: {
+    'Passion Fruit Juice': {
       kcal: 60,
       protein: 0.67,
       carbohydrates: 14.45,
       fats: 0.18
     },
-    pear: {
+    'Pear': {
       kcal: 57,
       protein: 0.36,
       carbohydrates: 15.23,
       fats: 0.14
     },
-    pineapple: {
+    'Pineapple': {
       kcal: 50,
       protein: 0.54,
       carbohydrates: 13.12,
       fats: 0.12
     },
-    banana: {
+    'Banana': {
       kcal: 89,
       protein: 1.09,
       carbohydrates: 22.84,
       fats: 0.33
     },
-    guava: {
+    'Guava': {
       kcal: 68,
       protein: 2.55,
       carbohydrates: 14.32,
       fats: 0.95
     },
-    kiwi: {
+    'Kiwi': {
       kcal: 61,
       protein: 1.14,
       carbohydrates: 14.66,
       fats: 0.52
     },
-    limonade: {
+    'Limonade': {
       kcal: 22,
       protein: 0.35,
       carbohydrates: 6.9,
       fats: 0.24
     },
-    mango: {
+    'Mango': {
       kcal: 60,
       protein: 0.82,
       carbohydrates: 14.98,
@@ -165,9 +165,16 @@ export const foodData = {
     },
     
   },
-  greens: {},
+  greens: {
+    'cookedSpinach': {
+      kcal: 0,
+      protein: 0,
+      carbohydrates: 0,
+      fats: 0
+    }
+  },
   fats: {
-    butter: {
+    'Butter': {
       kcal: 717,
       protein: 0,
       carbohydrates: 0,
