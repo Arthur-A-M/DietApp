@@ -69,13 +69,13 @@ export const foodGroups = [
  */
 export const foodData = {
   protein: {
-    'Fried Bull\'s Liver':{
+    'Fried Bull\'s Liver': {
       kcal: 175,
       protein: 26.52,
       carbohydrates: 5.16,
       fats: 4.68
     },
-    'Cooked Chiken':{
+    'Cooked Chiken': {
       kcal: 155,
       protein: 24.24,
       carbohydrates: 0,
@@ -87,13 +87,13 @@ export const foodData = {
       carbohydrates: 0.51,
       fats: 4.71
     },
-    'Cooked Chiken Liver':{
+    'Cooked Chiken Liver': {
       kcal: 167,
       protein: 24.46,
       carbohydrates: 0.87,
       fats: 6.51
     },
-    'Cooked Chiken Heart':{
+    'Cooked Chiken Heart': {
       kcal: 185,
       protein: 26.41,
       carbohydrates: 0.1,
@@ -129,7 +129,7 @@ export const foodData = {
       carbohydrates: 57,
       fats: 19
     },
-    'Fermented Milk':{
+    'Fermented Milk': {
       kcal: 23,
       protein: 2.1,
       carbohydrates: 3.6,
@@ -161,7 +161,7 @@ export const foodData = {
       carbohydrates: 23.51,
       fats: 0.83
     },
-    'Raw Cassava':{
+    'Raw Cassava': {
       kcal: 358,
       protein: 0.19,
       carbohydrates: 88.69,
@@ -173,7 +173,7 @@ export const foodData = {
       carbohydrates: 82,
       fats: 0
     },
-    'Artisanal Wholemeal Bread':{
+    'Artisanal Wholemeal Bread': {
       kcal: 256,
       protein: 11,
       carbohydrates: 47,
@@ -378,7 +378,7 @@ export const foodData = {
       carbohydrates: 0,
       fats: 100
     },
-    'Nuts':{
+    'Nuts': {
       kcal: 666.7,
       protein: 15.3,
       carbohydrates: 13.3,

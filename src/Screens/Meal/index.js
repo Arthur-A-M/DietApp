@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Text, View, Pressable, TextInput } from 'react-native';
 
-import { SelectList } from 'react-native-dropdown-select-list'
+import { SelectList } from 'react-native-dropdown-select-list';
+
+import { foodData } from '../../Data';
 
 import { styles } from './styles';
 
@@ -16,16 +18,9 @@ export default function MealScreen({ navigation, route }) {
   const [grams, setGrams] = useState(0);
   const [calories, setCalories] = useState(0);
 
-  const data = [
-    'protein',
-    'carbohydrates',
-    'fruts',
-    'greens',
-  ];
-
   function addCalories() {
-    const caloriesAdded = (calPer100Gram*grams)/100;
-    setCalories(calories+caloriesAdded);
+    const caloriesAdded = (calPer100Gram * grams) / 100;
+    setCalories(calories + caloriesAdded);
     return setSelected("");
   }
 
@@ -33,21 +28,18 @@ export default function MealScreen({ navigation, route }) {
     <View style={styles.container}>
       <Text>{item.name}</Text>
       <View>
-        <Text style={{ textAlign: 'center' }}>Minimium grams</Text>
-        <Text>protein {item.protein}g</Text>
-        <Text>carbohydrates {item.carbohydrates}g</Text>
-        <Text>fruts {item.fruts}g</Text>
-        <Text>greens {item.greens}g</Text>
+        <Text style={{ textAlign: 'center' }}>Minimum grams</Text>
+        {Object.entries(foodData).map(([key]) => (
+          <Text key={key}>
+           {item[key]}g
+          </Text>
+        ))}
       </View>
       <Pressable>
-        <Text>calories {item.calories}</Text>
+        <Text>Calories {item.calories}</Text>
       </Pressable>
-      <SelectList
-        setSelected={(val) => setSelected(val)}
-        data={data}
-        save="value"
-      />
-      {selected ?
+      <SelectList setSelected={(val) => setSelected(val)} data={Object.keys(foodData)} save="value" />
+      {selected ? (
         <View>
           <TextInput
             style={styles.input}
@@ -65,14 +57,12 @@ export default function MealScreen({ navigation, route }) {
             placeholder="Grams of food"
             keyboardType="numeric"
           />
-          <Pressable
-          onPress={addCalories}
-          >
+          <Pressable onPress={addCalories}>
             <Text>Add</Text>
           </Pressable>
         </View>
-        : null}
-        <Text>{calories} Calories obtained</Text>
+      ) : null}
+      <Text>{calories} Calories obtained</Text>
     </View>
   );
 }
