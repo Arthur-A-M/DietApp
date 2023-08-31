@@ -9,19 +9,19 @@ import { styles } from './styles';
 
 export default function MealScreen({ navigation, route }) {
   const { item } = route.params;
+  const [selected, setSelected] = useState("");
+  const [calPer100Gram, setCalPer100Gram] = useState("");
+  const [grams, setGrams] = useState("");
+  const [calories, setCalories] = useState(0);
+
   useEffect(() => {
     console.log(item);
-  });
-
-  const [selected, setSelected] = useState("");
-  const [calPer100Gram, setCalPer100Gram] = useState(0);
-  const [grams, setGrams] = useState(0);
-  const [calories, setCalories] = useState(0);
+  }, []);
 
   function addCalories() {
     const caloriesAdded = (calPer100Gram * grams) / 100;
     setCalories(calories + caloriesAdded);
-    return setSelected("");
+    setSelected("");
   }
 
   return (
@@ -31,20 +31,20 @@ export default function MealScreen({ navigation, route }) {
         <Text style={{ textAlign: 'center' }}>Minimum grams</Text>
         {Object.entries(foodData).map(([key]) => (
           <Text key={key}>
-           {item[key]}g
+            {item[key]}g
           </Text>
         ))}
       </View>
       <Pressable>
         <Text>Calories {item.calories}</Text>
       </Pressable>
-      <SelectList setSelected={(val) => setSelected(val)} data={Object.keys(foodData)} save="value" />
+      <SelectList setSelected={setSelected} data={Object.keys(foodData)} save="value" />
       {selected ? (
         <View>
           <TextInput
             style={styles.input}
             onChangeText={setCalPer100Gram}
-            value={calPer100Gram}
+            value={calPer100Gram.toString()}
             maxLength={5}
             placeholder="Calories per 100 grams"
             keyboardType="numeric"
@@ -52,7 +52,7 @@ export default function MealScreen({ navigation, route }) {
           <TextInput
             style={styles.input}
             onChangeText={setGrams}
-            value={grams}
+            value={grams.toString()}
             maxLength={4}
             placeholder="Grams of food"
             keyboardType="numeric"
