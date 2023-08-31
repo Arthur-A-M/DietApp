@@ -68,7 +68,62 @@ export const foodGroups = [
     }
  */
 export const foodData = {
-  protein: a,
+  protein: {
+    'Fried Bull\'s Liver':{
+      kcal: 175,
+      protein: 26.52,
+      carbohydrates: 5.16,
+      fats: 4.68
+    },
+    'Cooked Chiken':{
+      kcal: 155,
+      protein: 24.24,
+      carbohydrates: 0,
+      fats: 5.7
+    },
+    'Fried Chicken': {
+      kcal: 187,
+      protein: 33.44,
+      carbohydrates: 0.51,
+      fats: 4.71
+    },
+    'Cooked Chiken Liver':{
+      kcal: 167,
+      protein: 24.46,
+      carbohydrates: 0.87,
+      fats: 6.51
+    },
+    'Cooked Chiken Heart':{
+      kcal: 185,
+      protein: 26.41,
+      carbohydrates: 0.1,
+      fats: 7.92
+    },
+    'Cooked Chiken Gizzard': {
+      kcal: 154,
+      protein: 30.39,
+      carbohydrates: 0,
+      fats: 2.68
+    },
+    'Cooked Fish': {
+      kcal: 162,
+      protein: 22.86,
+      carbohydrates: 0,
+      fats: 7.17
+    },
+    'Cooked Egg': {
+      kcal: 155,
+      protein: 12.58,
+      carbohydrates: 1.12,
+      fats: 10.61
+    },
+    'Fried Egg': {
+      kcal: 196,
+      protein: 13.61,
+      carbohydrates: 0.83,
+      fats: 14.84
+    }
+  },
   carbohydrates: {
     'Cooked Rice': {
       kcal: 130,
@@ -76,6 +131,18 @@ export const foodData = {
       carbohydrates: 28.7,
       fats: 0.28
     },
+    'Cooked Whole Rice': {
+      kcal: 112,
+      protein: 2.32,
+      carbohydrates: 23.51,
+      fats: 0.83
+    },
+    'Raw Cassava':{
+      kcal: 358,
+      protein: 0.19,
+      carbohydrates: 88.69,
+      fats: 0.02
+    }
 
   },
   fruts: {
@@ -166,12 +233,102 @@ export const foodData = {
     
   },
   greens: {
-    'cookedSpinach': {
-      kcal: 0,
-      protein: 0,
-      carbohydrates: 0,
-      fats: 0
-    }
+    'Cooked Spinach': {
+      kcal: 23,
+      protein: 2.97,
+      carbohydrates: 3.75,
+      fats: 0.26
+    },
+    'Onion': {
+      kcal: 44,
+      protein: 1.36,
+      carbohydrates: 10.15,
+      fats: 0.19
+    },
+    'Cooked Flat Lettuce': {
+      kcal: 13,
+      protein: 1.35,
+      carbohydrates: 2.23,
+      fats: 0.22
+    },
+    'Cooked Eggplant': {
+      kcal: 35,
+      protein: 0.83,
+      carbohydrates: 8.73,
+      fats: 0.23
+    },
+    'Cooked Cauliflower': {
+      kcal: 23,
+      protein: 1.84,
+      carbohydrates: 4.11,
+      fats: 0.45
+    },
+    'Cooked Carrot': {
+      kcal: 35,
+      protein: 0.76,
+      carbohydrates: 8.22,
+      fats: 0.18
+    },
+    'Carrot': {
+      kcal: 41,
+      protein: 0.93,
+      carbohydrates: 9.58,
+      fats: 0.24
+    },
+    'Cooked Cabbage': {
+      kcal: 20,
+      protein: 2.08,
+      carbohydrates: 3.71,
+      fats: 0.24
+    },
+    'Cooked Broccoli': {
+      kcal: 35,
+      protein: 2.38,
+      carbohydrates: 7.18,
+      fats: 0.41
+    },
+    'Cooked Beet': {
+      kcal: 44,
+      protein: 1.68,
+      carbohydrates: 9.96,
+      fats: 0.18
+    },
+    'Cooked Black Bean': {
+      kcal: 33,
+      protein: 4.83,
+      carbohydrates: 4.72,
+      fats: 0.58
+    },
+    'Tomato': {
+      kcal: 18,
+      protein: 0.88,
+      carbohydrates: 3.89,
+      fats: 0.2
+    },
+    'Cooked Sweet Potato': {
+      kcal: 90,
+      protein: 2.01,
+      carbohydrates: 20.71,
+      fats: 0.15
+    },
+    'Cooked Zucchini': {
+      kcal: 17,
+      protein: 1.21,
+      carbohydrates: 3.11,
+      fats: 0.32
+    },
+    'Pea Soup': {
+      kcal: 98,
+      protein: 7.05,
+      carbohydrates: 17.08,
+      fats: 0.51
+    },
+    'Cooked Chayote':{
+      kcal: 22,
+      protein: 0.62,
+      carbohydrates: 4.5,
+      fats: 0.48
+    },
   },
   fats: {
     'Butter': {
@@ -180,5 +337,17 @@ export const foodData = {
       carbohydrates: 0,
       fats: 81
     },
+    'Olive Oil': {
+      kcal: 904.15,
+      protein: 0,
+      carbohydrates: 0,
+      fats: 100
+    },
+    'Nuts':{
+      kcal: 666.7,
+      protein: 15.3,
+      carbohydrates: 13.3,
+      fats: 67
+    }
   }
 }
