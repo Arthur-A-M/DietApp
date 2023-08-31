@@ -122,6 +122,30 @@ export const foodData = {
       protein: 13.61,
       carbohydrates: 0.83,
       fats: 14.84
+    },
+    'Powdered Milk': {
+      kcal: 465,
+      protein: 17,
+      carbohydrates: 57,
+      fats: 19
+    },
+    'Fermented Milk':{
+      kcal: 23,
+      protein: 2.1,
+      carbohydrates: 3.6,
+      fats: 0
+    },
+    'Whey Iogurt': {
+      kcal: 69,
+      protein: 8.4,
+      carbohydrates: 7.6,
+      fats: 0.5
+    },
+    'Fried Beef': {
+      kcal: 252,
+      protein: 27.29,
+      carbohydrates: 0,
+      fats: 15.01
     }
   },
   carbohydrates: {
@@ -131,7 +155,7 @@ export const foodData = {
       carbohydrates: 28.7,
       fats: 0.28
     },
-    'Cooked Whole Rice': {
+    'Cooked Wholemeal Rice': {
       kcal: 112,
       protein: 2.32,
       carbohydrates: 23.51,
@@ -142,8 +166,19 @@ export const foodData = {
       protein: 0.19,
       carbohydrates: 88.69,
       fats: 0.02
+    },
+    'Cassava Flour': {
+      kcal: 336,
+      protein: 2,
+      carbohydrates: 82,
+      fats: 0
+    },
+    'Artisanal Wholemeal Bread':{
+      kcal: 256,
+      protein: 11,
+      carbohydrates: 47,
+      fats: 2.9
     }
-
   },
   fruts: {
     'Plum': {
