@@ -15,13 +15,20 @@ export default function MealScreen({ navigation, route }) {
   const [grams, setGrams] = useState("");
   const [calories, setCalories] = useState(0);
   const [secondSelected, setSecondSelected] = useState("");
+  const [foodsEaten, setFoodsEaten] = useState([]);
 
   useEffect(() => {
     console.log(item);
-  }, []);
+    console.log(foodsEaten);
+  }, [foodsEaten]);
 
   function addCalories() {
+    const newFood = {
+      secondSelected: secondSelected,
+      grams: grams
+    }
     const caloriesAdded = (calPer100Gram * grams) / 100;
+    setFoodsEaten(foodsEaten => [...foodsEaten, newFood]);
     setCalories(calories + caloriesAdded);
     setSelected("");
   }
@@ -46,7 +53,7 @@ export default function MealScreen({ navigation, route }) {
       <SelectList setSelected={setSelected} data={Object.keys(foodData)} save="value" search={false} />
 
       {selected && (
-        <SelectList setSelected={setSecondSelected} data={Object.keys(foodData[selected])} save="value" search={false} /> 
+        <SelectList setSelected={setSecondSelected} data={Object.keys(foodData[selected])} save="value" search={false} />
       )}
 
       {secondSelected && (
