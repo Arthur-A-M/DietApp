@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Text, View, Pressable, TextInput } from 'react-native';
 
-import { SelectList } from 'react-native-dropdown-select-list';
+import { SelectList } from 'react-native-dropdown-select-list';// search is bugged
 
 import { foodData } from '../../Data';
 
@@ -9,10 +9,12 @@ import { styles } from './styles';
 
 export default function MealScreen({ navigation, route }) {
   const { item } = route.params;
+
   const [selected, setSelected] = useState("");
   const [calPer100Gram, setCalPer100Gram] = useState("");
   const [grams, setGrams] = useState("");
   const [calories, setCalories] = useState(0);
+  const [secondSelected, setSecondSelected] = useState("");
 
   useEffect(() => {
     console.log(item);
@@ -27,6 +29,7 @@ export default function MealScreen({ navigation, route }) {
   return (
     <View style={styles.container}>
       <Text>{item.name}</Text>
+
       <View>
         <Text style={{ textAlign: 'center' }}>Minimum grams</Text>
         {Object.entries(foodData).map(([key]) => (
@@ -35,11 +38,18 @@ export default function MealScreen({ navigation, route }) {
           </Text>
         ))}
       </View>
+
       <Pressable>
         <Text>Calories {item.calories}</Text>
       </Pressable>
-      <SelectList setSelected={setSelected} data={Object.keys(foodData)} save="value" />
-      {selected ? (
+
+      <SelectList setSelected={setSelected} data={Object.keys(foodData)} save="value" search={false} />
+
+      {selected && (
+        <SelectList setSelected={setSecondSelected} data={Object.keys(foodData[selected])} save="value" search={false} /> 
+      )}
+
+      {secondSelected && (
         <View>
           <TextInput
             style={styles.input}
@@ -49,6 +59,7 @@ export default function MealScreen({ navigation, route }) {
             placeholder="Calories per 100 grams"
             keyboardType="numeric"
           />
+
           <TextInput
             style={styles.input}
             onChangeText={setGrams}
@@ -57,11 +68,13 @@ export default function MealScreen({ navigation, route }) {
             placeholder="Grams of food"
             keyboardType="numeric"
           />
+
           <Pressable onPress={addCalories}>
             <Text>Add</Text>
           </Pressable>
         </View>
-      ) : null}
+      )}
+
       <Text>{calories} Calories obtained</Text>
     </View>
   );

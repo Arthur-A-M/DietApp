@@ -265,7 +265,7 @@ export const foodData = {
       carbohydrates: 14.98,
       fats: 0.38
     },
-    
+
   },
   greens: {
     'Cooked Spinach': {
@@ -358,7 +358,7 @@ export const foodData = {
       carbohydrates: 17.08,
       fats: 0.51
     },
-    'Cooked Chayote':{
+    'Cooked Chayote': {
       kcal: 22,
       protein: 0.62,
       carbohydrates: 4.5,
